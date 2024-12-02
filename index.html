@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Habit Tracker</title>
+</head>
+<body>
+  <header>
+    <h1>Habit Tracker</h1>
+  </header>
+  <main>
+    <section>
+        <h2>Track Results</h2>
+        <canvas id="habitChart" width="400" height="200"></canvas>          
+      <h2>Habits</h2>
+      <div id="habits">
+        <label>Sleep Hours (6h = 100%):</label>
+        <input type="number" id="sleepHours" placeholder="Enter hours">
+        <p id="sleepResult">0%</p>
+
+        <label>Study Hours (6h = 100%):</label>
+        <input type="number" id="studyHours" placeholder="Enter hours">
+        <p id="studyResult">0%</p>
+
+        <label>Mobile Usage (3h = 100%):</label>
+        <input type="number" id="mobileUsage" placeholder="Enter hours">
+        <p id="mobileResult">0%</p>
+
+        <label>Exercise:</label>
+        <button id="exerciseButton">No</button>
+        <p id="exerciseStatus" style="color: red;">✘</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Daily Journal</h2>
+      <textarea id="journal" placeholder="Write about your day..."></textarea>
+      <button id="saveJournal">Save</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+  <button id="clearData">Clear All Data</button>
+</body>
+</html>
